@@ -79,6 +79,7 @@ Parameter Name | Type | Sample Value | Default Value | Notes
 `email`|`string`|`"test@test.com"`| | 
 `filename`| `function`|`(request, file, callback): void`| | 
 `filename`| `string`|`"my_file.pdf"`| |If defined, this name will be used in place of *file.originalname* - use with caution, because the object can be easily overwritten (consider to configure [Object Versioning and Concurrency Control](https://cloud.google.com/storage/docs/gsutil/addlhelp/ObjectVersioningandConcurrencyControl))
+`filenameEncoding`| `boolean`|`true`| `false` |If passed `true` then it will encode the file name before uploading to Google Cloud Storage otherwise it will use same as filename
 `hideFilename`|`boolean`|`true`|`false`|If set to *true*, an UUID v4 will be used as object filename and *Content-Type* will be undefined
 `keyFilename`|`string`|`"./key.json"`| |Takes precedence over GCS_KEYFILE
 `maxRetries`|`number`|`5`|`3`| | 
@@ -115,6 +116,7 @@ Key | Description | Origin
 `bucket` | Bucket name | `multer-cloud-storage`
 `destination` | The pseudo-folder to which the file has been saved | `multer-cloud-storage`
 `filename` | The name of the file on Google Cloud Storage | `multer-cloud-storage`
+`filenameEncoding` | If `true` then it will URL encode the file name | `multer-cloud-storage`
 `path` | The full path to the uploaded file (basically `destination`+ `filename`) | `multer-cloud-storage`
 `contentType` | Content-type defined for stored object | `multer-cloud-storage`
 `size` | Size of the file in bytes | `multer-cloud-storage`

@@ -1,4 +1,3 @@
-import * as gcs from '@google-cloud/storage'
 import { StorageOptions } from '@google-cloud/storage';
 import { MulterGoogleCloudStorageOptions } from './index'
 import MulterGoogleCloudStorage from './index'
