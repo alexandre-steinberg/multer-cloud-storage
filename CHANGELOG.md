@@ -2,20 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## v3.2.0 - 2025-02-20
+## v4.0.0 - 2025-02-20
+
+### ⚠ BREAKING CHANGES
+
+- Dropped support for Node.js <= 14.x
+
+### Feature
+
+Add support for optional filenameEncoding (#14)
 
 ### Maintenance
 
 - Package updates:
-  @types/express         4.17.17 -> 4.17.21
+  @google-cloud/storage   6.12.0 -> 7.15.2
+  @types/express         4.17.17 -> 5.0.0
   @types/jest             29.5.3 -> 29.5.14
   @types/multer            1.4.7 -> 1.4.12
-  @types/node             20.4.2 -> 20.17.19
+  @types/node             20.4.2 -> 22.13.4
   @types/urlencode         1.1.2 -> 1.1.4
   jest                    29.6.1 -> 29.7.0
-  rimraf                   5.0.1 -> 5.0.10
+  rimraf                   5.0.1 -> 6.0.1
   typescript               5.1.6 -> 5.7.3
-  uuid                     9.0.0 -> 9.0.1
+  urlencode                1.1.0 -> 2.0.0
+  uuid                     9.0.0 -> 11.1.0
 
 ## v3.1.0 - 2023-07-16
 

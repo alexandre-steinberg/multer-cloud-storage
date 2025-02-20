@@ -1,7 +1,7 @@
 import multer = require('multer');
 import { Bucket, CreateWriteStreamOptions, PredefinedAcl, Storage, StorageOptions } from '@google-cloud/storage';
 import { v4 as uuid } from 'uuid';
-import urlencode = require('urlencode');
+import { encode } from 'urlencode';
 import { Request } from 'express';
 
 type GoogleCloudBlobFileReference = {
@@ -74,7 +74,7 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 			}
 
 			if (this.options.filenameEncoding) {
-				blobFile.filename = urlencode(filename
+				blobFile.filename = encode(filename
 					.replace(/^\.+/g, '')
 					.replace(/^\/+/g, '')
 					.replace(/\r|\n/g, '_')
