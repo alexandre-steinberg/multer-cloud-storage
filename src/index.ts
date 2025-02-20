@@ -15,6 +15,7 @@ export type MulterGoogleCloudStorageOptions = {
   contentType?: ContentTypeFunction | string;
   destination?: any;
   filename?: any;
+  filenameEncoding?: boolean,
   hideFilename?: boolean;
   uniformBucketLevelAccess?: boolean;
 };
@@ -72,11 +73,15 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 				return false;
 			}
 
-			blobFile.filename = urlencode(filename
-				.replace(/^\.+/g, '')
-				.replace(/^\/+/g, '')
-				.replace(/\r|\n/g, '_')
-			);
+			if (this.options.filenameEncoding) {
+				blobFile.filename = urlencode(filename
+					.replace(/^\.+/g, '')
+					.replace(/^\/+/g, '')
+					.replace(/\r|\n/g, '_')
+				);
+			} else {
+				blobFile.filename = filename;
+			}
 		});
 
 		return blobFile;
