@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v4.1.0 - 2025-05-26
+
+### Maintenance
+
+- Package updates:
+  @google-cloud/storage       7.15.2 -> 7.16.0
+  @types/express               5.0.0 -> 5.0.2
+  @types/node                22.13.4 -> 22.15.21
+  multer                 1.4.5-lts.1 -> 2.0.0
+  typescript                   5.7.3 -> 5.8.3
+
+### Security
+
+Addresses CVE-2025-47935 and CVE-2025-47944 (#15)
+
 ## v4.0.0 - 2025-02-20
 
 ### ⚠ BREAKING CHANGES
