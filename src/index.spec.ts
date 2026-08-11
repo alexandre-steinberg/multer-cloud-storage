@@ -2,6 +2,9 @@ import { StorageOptions } from '@google-cloud/storage';
 import { MulterGoogleCloudStorageOptions } from './index'
 import MulterGoogleCloudStorage from './index'
 jest.mock('@google-cloud/storage');
+jest.mock('uuid', () => ({
+  v4: () => '00000000-0000-0000-0000-000000000000'
+}));
 
 const cloudStorage = (opts?: StorageOptions & MulterGoogleCloudStorageOptions ) => new MulterGoogleCloudStorage(opts);
 

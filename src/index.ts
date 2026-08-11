@@ -110,7 +110,7 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 
 		const bucket = opts.bucket || process.env.GCS_BUCKET || null;
 		const projectId = opts.projectId || process.env.GCLOUD_PROJECT || null;
-		const keyFilename = opts.keyFilename || process.env.GCS_KEYFILE || null;
+		const keyFilename = opts.keyFilename || process.env.GCS_KEYFILE || undefined;
 
 		if (!bucket) {
 			throw new Error('You have to specify bucket for Google Cloud Storage to work.');
@@ -157,7 +157,7 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 			file.stream.pipe(blobStream)
 				.on('error', (err) => cb(err))
 				.on('finish', (file) => {
-					const name = blob.metadata.name;
+					const name = blob.metadata.name ? blob.metadata.name : "";
 					const filename = name.substr(name.lastIndexOf('/')+1);
 					cb(null, {
 						bucket: blob.metadata.bucket,

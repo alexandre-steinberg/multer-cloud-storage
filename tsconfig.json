@@ -1,13 +1,15 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es6",
+        "types": ["node", "jest"],
+        "rootDir": "./src",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "target": "es2022",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
         "noImplicitAny": false,
         "sourceMap": true,
-        "lib": [
-            "es2016"
-        ],
+        "lib": ["es2022"],
         "outDir": "./lib",
         "typeRoots": [
             "node_modules/@types"

@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v5.0.0 - 2026-08-11
+
+### ⚠ BREAKING CHANGES
+
+- Dropped support for Node.js <= 18.x
+
+### Maintenance
+
+- Package updates:
+  @google-cloud/storage       7.16.0 -> 7.22.0
+  @types/express               5.0.2 -> 5.0.6
+  @types/jest                29.5.14 -> 30.0.0
+  @types/multer               1.4.12 -> 1.4.13 -> 2.2.0
+  @types/node               22.15.21 -> 22.20.1 -> 26.2.0
+  jest                        29.7.0 -> 30.4.2
+  multer                       2.0.0 -> 2.2.0
+  rimraf                       6.0.1 -> 6.1.3
+  typescript                   5.8.3 -> 5.9.3 -> 7.0.2
+  uuid                        11.1.0 -> 11.1.1 -> 14.0.1
+  
+
 ## v4.1.0 - 2025-05-26
 
 ### Maintenance
